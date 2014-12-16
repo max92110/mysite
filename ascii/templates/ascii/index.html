@@ -1,0 +1,9 @@
+{% if latest_input_list %}
+    <ul>
+        {% for Input_text in latest_input_list %}
+            <li><a href="/ascii/{{ Input_id }}/">{{ Input_text.Input_text }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No input string are available.</p>
+{% endif %}
