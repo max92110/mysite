@@ -10,4 +10,6 @@ urlpatterns = patterns('',
     url(r'^ascii/', include('ascii.urls')),
     url(r'^polls/', include('polls.urls', namespace='polls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^', include('index.urls')),
+    #url(r'^forum/', include('forum.urls')),
 )

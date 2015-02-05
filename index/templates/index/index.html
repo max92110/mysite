@@ -1,0 +1,30 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Список сервисов{% endblock %}
+
+{% block content %}
+
+<!--  -->
+{% if latest_page_name_list %}
+
+    <il>
+        {% for pages in latest_page_name_list %}
+            <li>
+            	{% load staticfiles %}
+            	<a href="{{pages.page_adress}}"> <img src="{% static pages.page_ico %}" width="15" height="15" /> {{ pages.page_name }}</a></li>
+        {% endfor %}
+    </il>
+{% else %}
+    <p>No pages are available.</p>
+{% endif %}
+
+{% comment %}
+<!-- Загрузка шаблона#{% include "polls/index.html" %}
+
+  -->
+{% endcomment %}
+{% endblock %}
+
+
+
+

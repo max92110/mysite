@@ -1,3 +1,25 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Список сервисов{% endblock %}
+
+{% block content %}
+
+
+{% load staticfiles %}
+<script type="text/JavaScript" src="{% static "ascii/js/trigonometria.js" %}" > </script>
+<link rel="stylesheet" href="{% static "ascii/css/ascii.css" %}">
+
+<div id="content">
+<p>Рассчет тригонометрических выражений</p>
+<input type="text" id="input">
+<input type="button" onclick="Start()" id="button">
+</div>
+<div id="output"></div>
+<div id="author">
+<a href='https://www.vk.com/morgenstern1'>Ermoshkina Alyona</a>
+</div>
+
+<!--
 {% if latest_input_list %}
     <ul>
         {% for Input_text in latest_input_list %}
@@ -7,3 +29,7 @@
 {% else %}
     <p>No input string are available.</p>
 {% endif %}
+
+ -->
+
+{% endblock %}

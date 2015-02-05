@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+<!-- Yandex informer START 
+<a href="https://clck.yandex.ru/redir/dtype=stred/pid=7/cid=1228/*https://pogoda.yandex.ru/togliatti" target="_blank"><img src="//info.weather.yandex.net/togliatti/2_white.ru.png?domain=ru" border="0" alt="Яндекс.Погода"/><img width="1" height="1" src="https://clck.yandex.ru/click/dtype=stred/pid=7/cid=1227/*https://img.yandex.ru/i/pix.gif" alt="" border="0"/></a>
+Yandex informer END -->
+
+
+
+<br/> <center> Текушее время: {% now "jS F Y H:i" %} </center>
+<hr/>
+<table>
+	<tr>
+    {% block content %}{% endblock %}
+</tr>
+</table>
+
+{% block footer %}
+	<hr/>
+<!--	<p><a href="/"> <img src="http://www.downloadclipart.net/large/19185-back-button-design.png" width="50" height="50" ></a> -->
+{% load staticfiles %}
+<a href="/"> <img src="{% static "index/img/back.png" %}"  width="50" height="50"  alt="My image"/></a>
+<hr/>
+
+</br>
+{% load staticfiles %}
+<a href="https://github.com/max92110"> <img src="{% static "index/img/github.png" %}"  alt="Github"/></a>
+
+<!--<p><a href="/"> <img src="back.png" width="50" height="50" ></a> -->
+{% endblock %}
+
+</body>
+</html>

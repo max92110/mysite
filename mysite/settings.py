@@ -40,6 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'polls',
     'ascii',
+    'index',
+    #'forum',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -71,7 +73,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'ru-RU'
 
-TIME_ZONE = 'Europe/Moscow'
+TIME_ZONE = 'Europe/Samara'
 
 USE_I18N = True
 
@@ -84,3 +86,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/max/web/mysite/static/'
